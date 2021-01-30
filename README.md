@@ -6,7 +6,7 @@ It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-m
 
 **The framework of SGRAF:**
 
-<img src="./figures/model.jpg" width = "100%" height="50%">
+<img src="./fig/model.png" width = "100%" height="50%">
 
 **The updated results (Better than the original paper)**
 <table>
