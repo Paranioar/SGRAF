@@ -18,13 +18,13 @@ It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-m
    <tr> <td>SGR</td> <td>76.6</td><td>93.7</td><td>96.6</td> <td>56.1</td><td>80.9</td><td>87.0</td> </tr>
    <tr> <td>SGRAF</td> <td>78.4</td><td>94.6</td><td>97.5</td> <td>58.2</td><td>83.0</td><td>89.1</td> </tr>
    <tr> <td rowspan="3">MSCOCO1k</td>
-        <td>SAF</td> <td>--</td><td>--</td><td>--</td> <td>--</td><td>--</td><td>--</td> </tr>
-   <tr> <td>SGR</td> <td>--</td><td>--</td><td>--</td> <td>--</td><td>--</td><td>--</td> </tr>
-   <tr> <td>SGRAF</td> <td>--</td><td>--</td><td>--</td> <td>--</td><td>--</td><td>--</td> </tr>
+        <td>SAF</td> <td>78.0</td><td>95.9</td><td>98.5</td> <td>62.2</td><td>89.5</td><td>95.4</td> </tr>
+   <tr> <td>SGR</td> <td>77.3</td><td>96.0</td><td>98.6</td> <td>62.1</td><td>89.6</td><td>95.3</td> </tr>
+   <tr> <td>SGRAF</td> <td>79.2</td><td>96.5</td><td>98.6</td> <td>63.5</td><td>90.2</td><td>95.8</td> </tr>
    <tr> <td rowspan="3">MSCOCO5k</td>
-        <td>SAF</td> <td>--</td><td>--</td><td>--</td> <td>--</td><td>--</td><td>--</td> </tr>
-   <tr> <td>SGR</td> <td>--</td><td>--</td><td>--</td> <td>--</td><td>--</td><td>--</td> </tr>
-   <tr> <td>SGRAF</td> <td>--</td><td>--</td><td>--</td> <td>--</td><td>--</td><td>--</td> </tr>
+        <td>SAF</td> <td>55.5</td><td>83.8</td><td>91.8</td> <td>40.1</td><td>69.7</td><td>80.4</td> </tr>
+   <tr> <td>SGR</td> <td>57.3</td><td>83.2</td><td>90.6</td> <td>40.5</td><td>69.6</td><td>80.3</td> </tr>
+   <tr> <td>SGRAF</td> <td>58.8</td><td>84.8</td><td>92.1</td> <td>41.6</td><td>70.9</td><td>81.5</td> </tr>
   
 
    
@@ -59,7 +59,7 @@ Modify the **model_path**, **data_path**, **vocab_path** in the `evaluation.py` 
 python evaluation.py
 ```
 
-Note that `fold5=True` is only for evaluation on MSCOCO1K test set (5 folders average) while `fold5=False` for MSCOCO5K and Flickr30K. Pretrained models and Log files can be downloaded from [Flickr30K_SGRAF](https://drive.google.com/file/d/1OBRIn1-Et49TDu8rk0wgP0wKXlYRk4Uj/view?usp=sharing) and MSCOCO_SGRAF (soon).
+Note that `fold5=True` is only for evaluation on mscoco1K (5 folders average) while `fold5=False` for mscoco5K and flickr30K. Pretrained models and Log files can be downloaded from [Flickr30K_SGRAF](https://drive.google.com/file/d/1OBRIn1-Et49TDu8rk0wgP0wKXlYRk4Uj/view?usp=sharing) and [MSCOCO_SGRAF](https://drive.google.com/file/d/1SpuORBkTte_LqOboTgbYRN5zXhn4M7ag/view?usp=sharing).
 
 ## Training new models from scratch
 Modify the **data_path**, **vocab_path**, **model_name**, **logger_name** in the `opts.py` file. Then run `train.py`:
@@ -91,6 +91,6 @@ If SGRAF is useful for your research, please cite the following paper:
 
 ## License
 
-[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0). If any quetions, please contact r1228240468@mail.dlut.edu.cn.
 
 
