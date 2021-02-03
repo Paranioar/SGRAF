@@ -34,7 +34,7 @@ It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-m
 We recommended the following dependencies.
 
 *  Python **(2.7 not 3.\*)**  
-*  [PyTorch](http://pytorch.org/) **(0.4.1)**  
+*  [PyTorch](http://pytorch.org/) **(0.4.1 not 1.\*)**  
 *  [NumPy](http://www.numpy.org/) **(>1.12.1)** 
 *  [TensorBoard](https://github.com/TeamHG-Memex/tensorboard_logger)  
 *  Punkt Sentence Tokenizer:
@@ -91,6 +91,7 @@ If SGRAF is useful for your research, please cite the following paper:
 
 ## License
 
-[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0). If any problems, please contact r1228240468@mail.dlut.edu.cn.
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).  
+If any problems, please contact me at (r1228240468@mail.dlut.edu.cn) or (r1228240468@gmail.com).
 
 
