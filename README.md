@@ -1,6 +1,9 @@
 # SGRAF
-PyTorch implementation for AAAI2021 paper of [**“Similarity Reasoning and Filtration for Image-Text Matching”**](https://drive.google.com/file/d/1tAE_qkAxiw1CajjHix9EXoI7xu2t66iQ/view?usp=sharing).  
-It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).
+*PyTorch implementation for AAAI2021 paper of [**“Similarity Reasoning and Filtration for Image-Text Matching”**](https://drive.google.com/file/d/1tAE_qkAxiw1CajjHix9EXoI7xu2t66iQ/view?usp=sharing).* 
+
+*It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).* 
+
+*We have released two versions of SGRAF: **Branch `master` for python2.7**; **Branch `python3.6` for python3.6**.* 
 
 ## Introduction
 
@@ -31,11 +34,11 @@ It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-m
 </table> 
 
 ## Requirements 
-We recommended the following dependencies.
+We recommended the following dependencies for ***Branch `master`***.
 
-*  Python **(2.7 not 3.\*)**  
-*  [PyTorch](http://pytorch.org/) **(0.4.1 not 1.\*)**  
-*  [NumPy](http://www.numpy.org/) **(>1.12.1)** 
+*  Python 2.7  
+*  [PyTorch (>=0.4.1)](http://pytorch.org/)    
+*  [NumPy (>=1.12.1)](http://www.numpy.org/)   
 *  [TensorBoard](https://github.com/TeamHG-Memex/tensorboard_logger)  
 *  Punkt Sentence Tokenizer:
 ```python
