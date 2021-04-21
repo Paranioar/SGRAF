@@ -21,34 +21,31 @@ We recommended the following dependencies for ***Branch `python3.6`***.
 [Note]: The code applies to ***Python3.6 + Pytorch1.7***.
 
 ## Acknowledgements
-Thanks to the exploration and discussion with [KevinLight831](https://github.com/KevinLight831), we made these adjustments as follows:  
-1. Adjust **`evaluation.py`**:  
+Thanks to the exploration and discussion with [KevinLight831](https://github.com/KevinLight831), we made some adjustments as follows:  
+**1. Adjust `evaluation.py`**:  
+*for i, (k, v) in enumerate(self.meters.iteritems()):*  
+***------>**  ```for i, (k, v) in enumerate(self.meters.items()):```*  
+*for k, v in self.meters.iteritems():*   
+***------>**  ```for k, v in self.meters.items():```*
 
-```for i, (k, v) in enumerate(self.meters.iteritems()):```  
-**------>  ```for i, (k, v) in enumerate(self.meters.items()):```**  
-```for k, v in self.meters.iteritems():```   
-**------>  ```for k, v in self.meters.items():```**
-
-2. Adjust **`model.py`**:  
+**2. Adjust `model.py`**:    
+*cap_emb = (cap_emb[:, :, :cap_emb.size(2)/2] + cap_emb[:, :, cap_emb.size(2)/2:])/2*   
+***------>**  ```cap_emb = (cap_emb[:, :, :cap_emb.size(2)//2] + cap_emb[:, :, cap_emb.size(2)//2:])/2```*  
    
-```cap_emb = (cap_emb[:, :, :cap_emb.size(2)/2] + cap_emb[:, :, cap_emb.size(2)/2:])/2```   
-**------>  ```cap_emb = (cap_emb[:, :, :cap_emb.size(2)//2] + cap_emb[:, :, cap_emb.size(2)//2:])/2```**  
+**3. Adjust `data.py`**:   
+*img_id = index/self.im_div*  
+***------>**  ```img_id = index//self.im_div```*
    
-3. Adjust **`model.py`**:
+*for line in open(loc+'%s_caps.txt' % data_split, 'rb'):*    
+*tokens = nltk.tokenize.word_tokenize(str(caption).lower().decode('utf-8'))*    
 
-```img_id = index/self.im_div```  
-**------>  ```img_id = index//self.im_div```**
-   
-```for line in open(loc+'%s_caps.txt' % data_split, 'rb'):```  
-```tokens = nltk.tokenize.word_tokenize(str(caption).lower().decode('utf-8'))```  
-
-**------>  ```for line in open(loc+'%s_caps.txt' % data_split, 'rb'):```**  
-**------>  ```tokens = nltk.tokenize.word_tokenize(caption.lower().decode('utf-8'))```**  
+***------>**  ```for line in open(loc+'%s_caps.txt' % data_split, 'rb'):```*  
+***------>**  ```tokens = nltk.tokenize.word_tokenize(caption.lower().decode('utf-8'))```*  
 
 or 
 
-**------>  ```for line in open(loc+'%s_caps.txt' % data_split, 'r', encoding='utf-8'):```**  
-**------>  ```tokens = nltk.tokenize.word_tokenize(str(caption).lower())```**
+***------>**  ```for line in open(loc+'%s_caps.txt' % data_split, 'r', encoding='utf-8'):```*  
+***------>**  ```tokens = nltk.tokenize.word_tokenize(str(caption).lower())```*
 
 ## Download data and vocab
 We follow [SCAN](https://github.com/kuanghuei/SCAN) to obtain image features and vocabularies, which can be downloaded by using:
