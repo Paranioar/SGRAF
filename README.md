@@ -1,6 +1,9 @@
 # SGRAF
-PyTorch implementation for AAAI2021 paper of [**“Similarity Reasoning and Filtration for Image-Text Matching”**](https://drive.google.com/file/d/1tAE_qkAxiw1CajjHix9EXoI7xu2t66iQ/view?usp=sharing).  
-It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).
+*PyTorch implementation for AAAI2021 paper of [**“Similarity Reasoning and Filtration for Image-Text Matching”**](https://drive.google.com/file/d/1tAE_qkAxiw1CajjHix9EXoI7xu2t66iQ/view?usp=sharing).* 
+
+*It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).* 
+
+*We have released two versions of SGRAF: **Branch `master` for python2.7**; **Branch `python3.6` for python3.6**.* 
 
 ## Introduction
 
@@ -8,41 +11,44 @@ It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-m
 
 <img src="./fig/model.png" width = "100%" height="50%">
 
-**The updated results (Better than the original paper)**
-<table>
-   <tr> <td rowspan="2">Dataset</td> <td rowspan="2", align="center">Module</td> 
-        <td colspan="3", align="center">Sentence retrieval</td> <td colspan="3", align="center">Image retrieval</td> </tr>
-   <tr> <td>R@1</td><td>R@5</td><td>R@10</td> <td>R@1</td><td>R@5</td><td>R@10</td> </tr>
-   <tr> <td rowspan="3">Flick30k</td>
-        <td>SAF</td> <td>75.6</td><td>92.7</td><td>96.9</td> <td>56.5</td><td>82.0</td><td>88.4</td> </tr>
-   <tr> <td>SGR</td> <td>76.6</td><td>93.7</td><td>96.6</td> <td>56.1</td><td>80.9</td><td>87.0</td> </tr>
-   <tr> <td>SGRAF</td> <td>78.4</td><td>94.6</td><td>97.5</td> <td>58.2</td><td>83.0</td><td>89.1</td> </tr>
-   <tr> <td rowspan="3">MSCOCO1k</td>
-        <td>SAF</td> <td>78.0</td><td>95.9</td><td>98.5</td> <td>62.2</td><td>89.5</td><td>95.4</td> </tr>
-   <tr> <td>SGR</td> <td>77.3</td><td>96.0</td><td>98.6</td> <td>62.1</td><td>89.6</td><td>95.3</td> </tr>
-   <tr> <td>SGRAF</td> <td>79.2</td><td>96.5</td><td>98.6</td> <td>63.5</td><td>90.2</td><td>95.8</td> </tr>
-   <tr> <td rowspan="3">MSCOCO5k</td>
-        <td>SAF</td> <td>55.5</td><td>83.8</td><td>91.8</td> <td>40.1</td><td>69.7</td><td>80.4</td> </tr>
-   <tr> <td>SGR</td> <td>57.3</td><td>83.2</td><td>90.6</td> <td>40.5</td><td>69.6</td><td>80.3</td> </tr>
-   <tr> <td>SGRAF</td> <td>58.8</td><td>84.8</td><td>92.1</td> <td>41.6</td><td>70.9</td><td>81.5</td> </tr>
-  
-
-   
-</table> 
-
 ## Requirements 
-We recommended the following dependencies.
+We recommended the following dependencies for ***Branch `python3.6`***.
 
-*  Python **(2.7 not 3.\*)**  
-*  [PyTorch](http://pytorch.org/) **(0.4.1 not 1.\*)**  
-*  [NumPy](http://www.numpy.org/) **(>1.12.1)** 
+*  Python 3.6  
+*  [PyTorch (>=0.4.1)](http://pytorch.org/)    
+*  [NumPy (>=1.12.1)](http://www.numpy.org/)   
 *  [TensorBoard](https://github.com/TeamHG-Memex/tensorboard_logger)  
-*  Punkt Sentence Tokenizer:
-```python
-import nltk
-nltk.download()
-> d punkt
-```
+[Note]: The code applies to ***Python3.6 + Pytorch1.7***.
+
+## Acknowledgements
+Thanks to the exploration and discussion with [KevinLight831](https://github.com/KevinLight831), we made these adjustments as follows:  
+1. Adjust **`evaluation.py`**:  
+
+```for i, (k, v) in enumerate(self.meters.iteritems()):```  
+**------>  ```for i, (k, v) in enumerate(self.meters.items()):```**  
+```for k, v in self.meters.iteritems():```   
+**------>  ```for k, v in self.meters.items():```**
+
+2. Adjust **`model.py`**:  
+   
+```cap_emb = (cap_emb[:, :, :cap_emb.size(2)/2] + cap_emb[:, :, cap_emb.size(2)/2:])/2```   
+**------>  ```cap_emb = (cap_emb[:, :, :cap_emb.size(2)//2] + cap_emb[:, :, cap_emb.size(2)//2:])/2```**  
+   
+3. Adjust **`model.py`**:
+
+```img_id = index/self.im_div```  
+**------>  ```img_id = index//self.im_div```**
+   
+```for line in open(loc+'%s_caps.txt' % data_split, 'rb'):```  
+```tokens = nltk.tokenize.word_tokenize(str(caption).lower().decode('utf-8'))```  
+
+**------>  ```for line in open(loc+'%s_caps.txt' % data_split, 'rb'):```**  
+**------>  ```tokens = nltk.tokenize.word_tokenize(caption.lower().decode('utf-8'))```**  
+
+or 
+
+**------>  ```for line in open(loc+'%s_caps.txt' % data_split, 'r', encoding='utf-8'):```**  
+**------>  ```tokens = nltk.tokenize.word_tokenize(str(caption).lower())```**
 
 ## Download data and vocab
 We follow [SCAN](https://github.com/kuanghuei/SCAN) to obtain image features and vocabularies, which can be downloaded by using:
