@@ -20,9 +20,15 @@ class PrecompDataset(data.Dataset):
 
         # load the raw captions
         self.captions = []
-        with open(loc+'%s_caps.txt' % data_split, 'rb') as f:
-            for line in f:
-                self.captions.append(line.strip())
+
+        # -------- The main difference between python2.7 and python3.6 --------#
+        # The suggestion from Hongguang Zhu (https://github.com/KevinLight831)
+        # ---------------------------------------------------------------------#
+        # for line in open(loc+'%s_caps.txt' % data_split, 'r', encoding='utf-8'):
+        #     self.captions.append(line.strip())
+
+        for line in open(loc+'%s_caps.txt' % data_split, 'rb'):
+            self.captions.append(line.strip())
 
         # load the image features
         self.images = np.load(loc+'%s_ims.npy' % data_split)
@@ -40,14 +46,18 @@ class PrecompDataset(data.Dataset):
 
     def __getitem__(self, index):
         # handle the image redundancy
-        img_id = index/self.im_div
+        img_id = index//self.im_div
         image = torch.Tensor(self.images[img_id])
         caption = self.captions[index]
         vocab = self.vocab
 
+        # -------- The main difference between python2.7 and python3.6 --------#
+        # The suggestion from Hongguang Zhu(https://github.com/KevinLight831)
+        # ---------------------------------------------------------------------#
+        # tokens = nltk.tokenize.word_tokenize(str(caption).lower())
+
         # convert caption (string) to word ids.
-        tokens = nltk.tokenize.word_tokenize(
-            str(caption).lower().decode('utf-8'))
+        tokens = nltk.tokenize.word_tokenize(caption.lower().decode('utf-8'))
         caption = []
         caption.append(vocab('<start>'))
         caption.extend([vocab(token) for token in tokens])
