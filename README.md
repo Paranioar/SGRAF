@@ -3,7 +3,7 @@
 
 *It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).* 
 
-*We have released two versions of SGRAF: **Branch `master` for python2.7**; **Branch `python3.6` for python3.6**.* 
+*We have released two versions of SGRAF: **Branch `main` for python2.7**; **Branch `python3.6` for python3.6**.* 
 
 ## Introduction
 
