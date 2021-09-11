@@ -95,6 +95,6 @@ If SGRAF is useful for your research, please cite the following paper:
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).  
-If any problems, please contact me at (r1228240468@mail.dlut.edu.cn) or (r1228240468@gmail.com).
+If any problems, please contact me at r1228240468@gmail.com.
 
 
