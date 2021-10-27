@@ -54,6 +54,11 @@ We follow [SCAN](https://github.com/kuanghuei/SCAN) to obtain image features and
 wget https://scanproject.blob.core.windows.net/scan-data/data.zip
 wget https://scanproject.blob.core.windows.net/scan-data/vocab.zip
 ```
+Another download link is available below：
+
+```bash
+https://drive.google.com/drive/u/0/folders/1os1Kr7HeTbh8FajBNegW8rjJf6GIhFqC
+```
 
 ## Pre-trained models and evaluation
 Modify the **model_path**, **data_path**, **vocab_path** in the `evaluation.py` file. Then run `evaluation.py`:
