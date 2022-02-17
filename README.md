@@ -51,8 +51,8 @@ or
 We follow [SCAN](https://github.com/kuanghuei/SCAN) to obtain image features and vocabularies, which can be downloaded by using:
 
 ```bash
-wget https://scanproject.blob.core.windows.net/scan-data/data.zip
-wget https://scanproject.blob.core.windows.net/scan-data/vocab.zip
+wget https://iudata.blob.core.windows.net/scan/data.zip
+wget https://iudata.blob.core.windows.net/scan/vocab.zip
 ```
 Another download link is available below：
 
