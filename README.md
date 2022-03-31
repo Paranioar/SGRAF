@@ -3,7 +3,9 @@
 
 *It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).* 
 
-*We have released two versions of SGRAF: **Branch `main` for python2.7**; **Branch `python3.6` for python3.6**.* 
+*We have released two versions of SGRAF: **Branch `main` for python2.7**; **Branch `python3.6` for python3.6**.*  
+
+*If any problems, please contact me at r1228240468@gmail.com. (r1228240468@mail.dlut.edu.cn is deprecated)*
 
 ## Introduction
 
@@ -100,6 +102,5 @@ If SGRAF is useful for your research, please cite the following paper:
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).  
-If any problems, please contact me at r1228240468@gmail.com.
 
 
