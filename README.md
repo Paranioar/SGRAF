@@ -5,6 +5,9 @@
 
 *We have released two versions of SGRAF: **Branch `main` for python2.7**; **Branch `python3.6` for python3.6**.* 
 
+*If any problems, please contact me at r1228240468@gmail.com. (r1228240468@mail.dlut.edu.cn is deprecated)*
+
+
 ## Introduction
 
 **The framework of SGRAF:**
@@ -100,6 +103,5 @@ If SGRAF is useful for your research, please cite the following paper:
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).  
-If any problems, please contact me at r1228240468@gmail.com.
 
 
