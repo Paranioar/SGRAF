@@ -63,6 +63,7 @@ https://drive.google.com/drive/u/0/folders/1os1Kr7HeTbh8FajBNegW8rjJf6GIhFqC
 ```
 
 ## Pre-trained models and evaluation
+The pretrained models are only for **Branch `python3.6`(python3.6)**, not for **Branch `main`(python2.7)**.  
 Modify the **model_path**, **data_path**, **vocab_path** in the `evaluation.py` file. Then run `evaluation.py`:
 
 ```bash
