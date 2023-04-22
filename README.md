@@ -93,12 +93,15 @@ For Flickr30K:
 
 If SGRAF is useful for your research, please cite the following paper:
 
-    @inproceedings{Diao2021SGRAF,
-      title={Similarity Reasoning and Filtration for Image-Text Matching},
-      author={Diao, Haiwen and Zhang, Ying and Ma, Lin and Lu, Huchuan},
-      booktitle={AAAI},
-      year={2021}
-    }
+      @inproceedings{Diao2021SGRAF,
+         title={Similarity reasoning and filtration for image-text matching},
+         author={Diao, Haiwen and Zhang, Ying and Ma, Lin and Lu, Huchuan},
+         booktitle={Proceedings of the AAAI conference on artificial intelligence},
+         volume={35},
+         number={2},
+         pages={1218--1226},
+         year={2021}
+      }
 
 ## License
 
