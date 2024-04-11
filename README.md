@@ -1,7 +1,7 @@
 # SGRAF
 *PyTorch implementation for AAAI2021 paper of [**“Similarity Reasoning and Filtration for Image-Text Matching”**](https://drive.google.com/file/d/1tAE_qkAxiw1CajjHix9EXoI7xu2t66iQ/view?usp=sharing).* 
 
-*It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Cross-modal_Retrieval_Tutorial](https://github.com/Paranioar/Cross-modal_Retrieval_Tutorial).* 
+*It is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) and [Awesome_Matching](https://github.com/Paranioar/Awesome_Matching_Pretraining_Transfering).* 
 
 *We have released two versions of SGRAF: **Branch `main` for python2.7**; **Branch `python3.6` for python3.6**.*  
 
